@@ -1,10 +1,12 @@
 import pandas as pd
 import requests
 import json
+import os
+from dotenv import load_dotenv
+load_dotenv()
 
-# 配置（在此处填入你的信息）
-POLYGON_RPC_URL = "https://polygon-mainnet.g.alchemy.com/v2/ezzUB6wzRH1vWlvdIC948"
-GRAPH_URL = "https://api.thegraph.com/subgraphs/name/polymarket/clob-schema-mainnet" # Polymarket 数据节点
+GRAPH_URL = os.getenv("GRAPH_URL")
+
 def get_polymarket_positions(wallet_address):
     # GraphQL 查询语句：获取该地址持有的仓位
     query = """

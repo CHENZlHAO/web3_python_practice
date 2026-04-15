@@ -1,13 +1,22 @@
-# 忽略 Python 虚拟环境文件夹
-venv/
+# 极其重要：忽略环境变量文件（通常存放私钥、API Key、Infura ID）
+.env
+.env.local
+.env.*
+
+# 忽略具体的密钥文件
+*.key
+*.pem
+
+# 忽略虚拟环境
 .venv/
+venv/
 env/
-ENV/
-
-# 忽略 IDE 配置文件
-.vscode/
-.idea/
-
-# 忽略 Python 缓存
 __pycache__/
 *.pyc
+
+# 忽略硬编码配置的文件（如果你习惯把配置写在 json 或 yaml 里）
+config.json
+secrets.yaml
+
+# 忽略 Foundry/Hardhat 可能产生的敏感文件
+.api_key

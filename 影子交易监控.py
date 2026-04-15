@@ -1,10 +1,11 @@
 import requests
 import time
 from datetime import datetime
+from dotenv import load_dotenv
+load_dotenv()
 
-# 配置区域
-SLUG = "us-x-iran-permanent-peace-deal-by-april-22-2026"
-CONDITION_ID = "0xbbc6689d0f6d57ea42168836712237c7308b3e0118c8914d31b6126d0f3254c5"
+SLUG = os.getenv("SLUG")
+CONDITION_ID = os.getenv("CONDITION_ID")
 
 def get_market_tokens():
     """获取该市场下 Yes 和 No 的所有 Token 信息"""
