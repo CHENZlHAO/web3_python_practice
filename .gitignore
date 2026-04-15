@@ -1,0 +1,13 @@
+# 忽略 Python 虚拟环境文件夹
+venv/
+.venv/
+env/
+ENV/
+
+# 忽略 IDE 配置文件
+.vscode/
+.idea/
+
+# 忽略 Python 缓存
+__pycache__/
+*.pyc
